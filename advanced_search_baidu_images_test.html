@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Tab是为了容易看懂-->
+        <title>高级搜索</title>
+        <link href="images/logo.ico" rel="shortcut icon">
+        <!--页面编码-->
+        <meta charset="UTF-8">
+        <!--CSS样式-->
+            <!--导入样式-->
+            <!--类：渐变色-->
+                <link href="CSS/gradient.css" type="text/css" rel="stylesheet"/>
+            <!--Boorsrarp4.5.0 CSS-->
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map" type="text/css" rel="stylesheet"/>
+            <!--写入样式-->
+                <!--背景样式-->
+                    <style>
+                        body{
+                            background: url(images/background.jpeg);
+                            background-position: center;
+                            background-repeat: repeat;
+                            background-position: 0% 0%;
+                        }
+                    </style>
+        <!--JS代码-->
+            <!--导入代码-->
+                <!--单选框（Jquery）-->
+                <script src="JS/radio.js"></script>
+                <!--jQuery3.5.1 JS-->
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.map"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.map"></script>
+                <!--Boorsrarp4.5.0 JS-->
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js.map"></script>
+                <!--切换百度图片搜索-->
+                    <script src="JS/choose_baidu_images.js"></script>
+                <!--切换百度资讯搜索-->
+                    <script src="JS/choose_baidu_information.js"></script>
+            <!--写入代码-->
+                <!--百度图片搜索-->
+                    <script>
+                        function baidu_images_search() {
+                            herf = 'http://image.baidu.com/search/index?tn=baiduimage&wd=' + document.getElementById("search_content_box").value + '&ie=utf-8' + '&width=' + document.getElementById("images_width").value + '&height=' + document.getElementById("images_height").value;
+                            if(document.getElementById('gif').checked) {
+                                herf = herf + '&lm=6'
+                            }
+                            else {
+                                herf = herf + '&lm=-1'
+                            }
+                            window.location.href = herf
+                        }
+                    </script>
+                <!--百度资讯搜索-->
+                    <script>
+                        function baidu_information_search() {
+                            herf = 'https://www.baidu.com/s?tn=news&w=' + document.getElementById("search_content_box").value+ '&ie=utf-8&rtt=' + document.getElementById("choose_sequence").options[document.getElementById("choose_sequence").selectedIndex].value + '&medium=' + document.getElementById("choose_range").options[document.getElementById("choose_range").selectedIndex].value;
+                            window.location.href = herf
+                        }
+                    </script>
+    </head>
+    <body style="text-align: center;color: #FFFFFF;">
+        <h1 class="gradient">高级搜索</h1>
+        <h2 id='title' class="gradient">百度图片搜索</h2>
+        <div id="search_interface" style="text-align: center;">
+            <span>搜索内容：</span><input id = "search_content_box" class="btn btn-light" name="browser" type = "text" style = "width: 400px;height: 25px;"/>
+            <br/>
+            <br/>
+            <span>图片宽度：</span><input data-placement="top" title="在此输入图片的宽度，仅支持大于1的整数，其他文本无效" id = "images_width" class="btn btn-light" name="browser" type = "text" style = "width: 150px;height: 25px;"/>
+            <span>图片高度：</span><input data-placement="top" title="在此输入图片的高度，仅支持大于1的整数，其他文本无效" id = "images_height" class="btn btn-light" name="browser" type = "text" style = "width: 150px;height: 25px;"/>
+            <br/>
+            <label>
+                <input id="gif" type="checkbox"/>
+                仅搜索动图
+            </label>
+            <br/>
+            <br/>
+            <input id = "start_searching" class="btn btn-primary" name="browser" type = "button" value ="百度图片搜索" onclick = "return baidu_images_search();"/>
+        </div>
+        <br/>
+        <div>
+            <label>
+                <input id="baidu_images" name="browser" value="" type="radio" onclick="return choose_baidu_images();" checked/>
+                百度图片搜索
+            </label>
+            <label>
+                <input id="baidu_images" name="browser" value="" type="radio" onclick="return choose_baidu_information();"/>
+                百度资讯搜索
+            </label>
+        </div>
+        <p style = "font-size: 12px;">开发人员：NSS中子星（网名）</p>
+        <a class="gradient" href="start_page.html">基本搜索</a>
+        <div id="message">
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>消息！</strong> 网页更新了！使用了Bootstrap4.5.0优化界面！
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>消息！</strong> 网页更新了！更新了新的功能！
+            </div>
+        </div>
+    </body>
+</html>

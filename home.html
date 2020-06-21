@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Tab是为了容易看懂-->
+        <title>NSS中子星工作室官网</title>
+        <link href="images/logo.ico" rel="shortcut icon">
+        <!--页面编码-->
+        <meta charset="UTF-8">
+        <!--CSS样式-->
+            <!--导入样式-->
+            <!--类：渐变色-->
+                <link href="CSS/gradient.css" type="text/css" rel="stylesheet"/>
+            <!--Boorsrarp4.5.0 CSS-->
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css.map" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map" type="text/css" rel="stylesheet"/>
+            <!--写入样式-->
+                <!--作品展示-->
+                    <!--<body>标签样式-->
+                        <style>
+                            body {
+                                position: relative; 
+                            }
+                        </style>
+                    <!--<div>标签样式-->
+                        <style>
+                        div {
+                            overflow: auto;
+                        }
+                        </style>
+                    <!--<iframe>标签样式-->
+                        <style>
+                        iframe {
+                            width: 50vw;
+                            height: 64vh;
+                        }
+                        </style>
+                    <!--<a>标签样式-->
+                        <style>
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                color: white;
+                            }
+                        </style>
+                    <!--work类-->
+                        <style>
+                            .work {
+                                border-style: outset;
+                                width: 240px;
+                                height: 380px;
+                                text-align: center;
+                                float: left;
+                                margin-top:10px;
+                                margin-bottom:10px;
+                                margin-right:15px;
+                                margin-left:15px;
+                                padding: 20px 0;
+                                transition: 0.75s;
+                            }
+                            .work:hover {
+                                box-shadow: 0 12px 16px 0 rgba(255, 217, 0, 0.5),0 16px 66px 0 gold;
+                                transition: 0.75s;
+                            }
+                            .work-show-image {
+                                width: 200px;
+                                height: 200px;
+                            }
+                            .work-author-image {
+                                width: 24px;
+                                height: 24px;
+                            }
+                        </style>
+                    <!--modal类-->
+                        <style>
+                            .modal-dialog {
+                                min-width: 64vw;
+                            }
+                            .modal-body {
+                                min-height: 64vh;
+                            }
+                        </style>
+                    <!--avatar类-->
+                        <style>
+                            .avatar {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        </style>
+                    <!--menber类-->
+                        <style>
+                            .menber {
+                                border-style: outset;
+                                width: 250px;
+                                text-align: center;
+                                float: left;
+                                margin-top:10px;
+                                margin-bottom:10px;
+                                margin-right:15px;
+                                margin-left:15px;
+                                padding: 20px 0;
+                                transition: 0.75s;
+                            }
+                            .menber:hover {
+                                box-shadow: 0 12px 16px 0 rgba(255, 217, 0, 0.5),0 16px 66px 0 gold;
+                                transition: 0.75s;
+                            }
+                        </style>
+        <!--JS代码-->
+            <!--导入代码-->
+            <!--jQuery3.5.1 JS-->
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.js"></script>
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.map"></script>
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.js"></script>
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
+                <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.map"></script>
+            <!--Boorsrarp4.5.0 JS-->
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js.map"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js.map"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js.map"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js.map"></script>
+    </head>
+    <body style="text-align: center;color: #FFFFFF;background-color: gray;padding-top: 50px" data-spy="scroll"></body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> 
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#works">优秀作品展示</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">关于我们</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                        认识我们的成员
+                    </span>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#member1">室长</a>
+                        <a class="dropdown-item" href="#member2">副室长</a>
+                        <a class="dropdown-item" href="#member3">室员</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <hr width="80%" color="gold" size=5>
+        <div>
+            <h1>NSS中子星工作室官网</h1>
+            <h2>欢迎来到NSS中子星工作室官网</h2>
+            <a href="http://zzxgzs.mysxl.cn/" style="font-size: 16px;">进入旧官网</a>
+        </div>
+        <hr id="works" width="80%" color="gold" size=5>
+        <div style="margin-left: 10vw;margin-right: 10vw;">
+            <h2>优秀作品展示</h2>
+            
+                <div class="work">
+                    <a target="_blank" href="https://shequ.codemao.cn/work/42118802">
+                        <img class="work-show-image" src="https://static.codemao.cn/kitten/rkldORjdU.image/png?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim" alt="作品封面">
+                        <h5>挖矿大亨Beta1.21 pre4</h5>
+                        <img class="work-author-image" src="https://static.codemao.cn/FsIX7sd7Pkw_CcsleFgkrOJp1W3g" alt="作者头像">
+                        <span>NSS中子星</span>
+                    </a>
+                    <!--快速体验-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quick_experience_1">快速体验</button>
+                    <!--快速体验页面-->
+                    <div class="modal fade" id="quick_experience_1" style="color: gold;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- 快速体验头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">快速体验</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- 快速体验主体 -->
+                                <div class="modal-body">
+                                    <iframe src ="https://player.codemao.cn/we/42118802"></iframe>
+                                </div>
+                                <!-- 快速体验底部 -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--快速体验关闭（防止眼瞎）-->
+                </div>
+
+                <div class="work">
+                    <a target="_blank" href="https://shequ.codemao.cn/work/45577521">
+                        <img class="work-show-image" src="https://static.codemao.cn/FlI6-dz6slyM_m715uwmzHEgSEw0" alt="作品封面">
+                        <h5>中子星工作室一Blast meteors 系统</h5>
+                        <img class="work-author-image" src="https://static.codemao.cn/Fjupjcebyx1Yxie_Amelh7zET3dJ" alt="作者头像">
+                        <span>NSS_浴霸炸了</span>
+                    </a>
+                    <!--快速体验-->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quick_experience_2">快速体验</button>
+                    <!--快速体验页面-->
+                    <div class="modal fade" id="quick_experience_2" style="color: gold;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- 快速体验头部 -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">快速体验</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- 快速体验主体 -->
+                                <div class="modal-body">
+                                    <iframe src ="https://player.codemao.cn/we/45577521"></iframe>
+                                </div>
+                                <!-- 快速体验底部 -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--快速体验关闭（防止眼瞎）-->
+                </div>
+
+        </div>
+        <hr id="about" width="80%" color="gold" size=5>
+        <div>
+            <h2>关于我们</h2>
+            <h3>我们在2020年创立</h3>
+            <h3>2020-2020</h3>
+            <h3>我们学会了很多，认识了很多同行</h3>
+            <h3>在这里，先感谢他们对我们工作室的支持</h3>
+            <h3>中子星工作室，在这几个月里飞速发展</h3>
+            <br>
+            <br>
+            <h3>我们收获了很多的人才</h3>
+            <img src="images/p1.png" alt="图片" width="150" height="150">
+            <br>
+            <br>
+            <h3>我们的技术得到了很大的进步</h3>
+            <img src="images/p2.png" alt="图片" width="150" height="150">
+            <br>
+            <br>
+            <h3>如今的我们，已经不是以前那个弱小的中子星工作室了</h3>
+            <h3>我们有着较大的规模，较为高超的技术，和睦的团体和对未来的展望</h3>
+            <h3>接下来的时间里</h3>
+            <h3>我们要更加努力，为了二级工作室而奋斗/奋斗脸</h3>
+        </div>
+        <hr id="member" width="80%" color="gold" size=5>
+        <div>
+            <h2>认识我们的成员</h2>
+            <hr id="member1" width="60%" color="gold" size=5>
+            <div style="margin-left: 10vw;margin-right: 10vw;">
+                <h3>室长</h3>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/2867423">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/FsIX7sd7Pkw_CcsleFgkrOJp1W3g" alt="头像">
+                    <span class="badge badge-pill badge-warning">室长</span>
+                    <span>NSS中子星</span>
+                </a>
+
+            </div>
+
+            <hr id="member2" width="60%" color="gold" size=5>
+            <div style="margin-left: 10vw;margin-right: 10vw;">
+                <h3>副室长</h3>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/5080715">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/Fjupjcebyx1Yxie_Amelh7zET3dJ" alt="头像">
+                    <span class="badge badge-pill badge-success">副室长</span>
+                    <span>NSS_浴霸炸了</span>
+                </a>
+
+            </div>
+
+            <hr id="member3" width="60%" color="gold" size=5>
+            <div style="margin-left: 10vw;margin-right: 10vw;">
+                <h3>室员</h3>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/7382264">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/Firb4YKIQAFnKEHuNeDfeyDXPhCX" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>秋水231</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/7545868">
+                    <img class="avatar rounded-circle" src="https://static-platform.codemao.cn/production/avatar/custom/34892566-7370-413f-b310-61325afd7c7a" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>王奕博YKPH</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/3411580">
+                    <img class="avatar rounded-circle" src="https://static-user-center.codemao.cn/user_0009.png" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>Shirley</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/6516779">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/FqyrBKHW8MPabIFUimU0H38tp9_I" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>中子星002</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/5252844">
+                    <img class="avatar rounded-circle" src="https://static-platform.codemao.cn/production/avatar/custom/f8f4478c-d80e-4eb7-a3ed-bd179989aebe" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>杨医生</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/4329303">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/FkoFKjNllEqR-aPFuOKNWSiE5AVz" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>有一个美丽的传说</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/6823388">
+                    <img class="avatar rounded-circle" src="https://static-platform.codemao.cn/production/avatar/custom/b86b9a4c-5d7d-4ca0-b668-6466b6652563" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>美丽的风景ilm_</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/5489072">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/FtlZnaDPwMqLLQhqiVfbmB_3xBlI" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>丢离</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/6384895">
+                    <img class="avatar rounded-circle" src="https://static-platform.codemao.cn/production/avatar/custom/9a448874-867f-4c86-a0ad-271d5c7b08be" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>feicke小号2</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/4329303">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/FqTksA253fqxEINAt2PfY58Qu9SX" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>迷恋风情</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/user/414951">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/Fqh7t1Xa_TUBz1m82MeQvXNCS_Z7" alt="头像">
+                    <span class="badge badge-pill badge-primary">室员</span>
+                    <span>思考中的编程者772</span>
+                </a>
+
+                <a target="_blank" class="menber" href="https://shequ.codemao.cn/work_shop/820">
+                    <img class="avatar rounded-circle" src="https://static.codemao.cn/community_frontend/asset/user_none_f39e1.png" alt="头像">
+                    <span class="badge badge-pill badge-info">虚位以待</span>
+                    <span>虚位以待</span>
+                </a>
+
+            </div>
+
+                <a target="_blank" href="https://shequ.codemao.cn/work_shop/820">
+                    <img src="https://static.codemao.cn/community_frontend/asset/user_none_f39e1.png" style="width: 200px;height: 200px;">
+                    <p>虚位以待，期待你的加入！</p>
+                </a>
+
+
+
+        </div>
+        <a href="http://zzxgzs.mysxl.cn/" style="font-size: 16px;">进入旧官网</a>
+        <p style = "font-size: 12px;">开发人员：NSS中子星（网名）</p>
+    </body>
+</html>

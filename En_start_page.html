@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neutron Star Studio Start Page</title>
+        <!--页面编码-->
+        <meta charset="UTF-8">
+        <!--CSS样式-->
+        <!--导入样式-->
+        <!--类：渐变色-->
+        <link href="CSS/gradient.css" type="text/css" rel="stylesheet"/>
+        <!--写入样式-->
+        <!--背景-->
+        <style>
+            body{
+                background: url(images/background.jpeg);
+                background-position: center;
+                background-repeat: repeat;
+                background-position: 0% 0%;
+            }
+        </style>
+        <!--<a>标签样式-->
+        <style>
+            a{
+                padding: 20px;
+                color: #FFFFFF;
+            }
+        </style>
+        <!--JS代码-->
+        <!--导入代码-->
+        <!--单选框（Jquery）-->
+        <script src="JS/radio.js">
+        </script>
+        <!--写入代码-->
+        <!--百度搜索-->
+        <script>
+            function baidu_search() {
+                window.location.href = 'https://www.baidu.com/s?w=' + document.getElementById("search_content_box").value;
+            }
+        </script>
+        <!--必应搜索-->
+        <script>
+            function bing_search() {
+                window.location.href = 'https://cn.bing.com/search?q=' + document.getElementById("search_content_box").value + "&FORM=BESBTB&ensearch=1";
+            }
+        </script>
+        <!--选择百度搜索引擎-->
+        <script>
+            function choose_baidu() {
+                document.getElementById('start_searching').onclick = baidu_search;
+                document.getElementById('start_searching').value = 'Baidu';
+            }
+        </script>
+        <!--选择必应搜索引擎-->
+        <script>
+            function choose_bing() {
+                document.getElementById('start_searching').onclick = bing_search;
+                document.getElementById('start_searching').value = 'Bing';
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;" class="gradient">Neutron Star Studio Start Page</h1>
+        <!--搜索栏-->
+        <div style="text-align: center;">
+            <input id = "search_content_box" name="browser" type = "text" style = "width: 400px;height: 25px;"/>
+            <input id = "start_searching" name="browser" type = "button" value ="Baidu" style = "width: 100px;height: 25px;" onclick = "return baidu_search();"/>
+        </div>
+        <div style="text-align: center;color: #FFFFFF;">
+            <br/>
+            <label>
+                <input id="baidu" name="browser" value="" type="radio" onclick="return choose_baidu();" checked/>
+                Baidu search engine
+            </label>
+            <label>
+                <input id="bing" name="browser" value="" type="radio" onclick="return choose_bing();"/>
+                Bing International Search Engine
+            </label>
+            <br/>
+            <a class="gradient" href="advanced_search.html">Advanced Search</a>
+            <h2>Quick link:</h2>
+            <a target="_blank" href = "https://www.baidu.com/">Baidu</a>
+            <a target="_blank" href = "https://shequ.codemao.cn/">Codemao community</a>
+            <a target="_blank" href = "https://kitten.codemao.cn/">Source editor Kitten3.0</a>
+            <a target="_blank" href = "https://preview-kitten.codemao.cn/">Source editor Kitten4.0</a>
+            <a target="_blank" href = "https://box.codemao.cn/">Code Island 2.0</a>
+            <a target="_blank" href = "https://box3.codemao.cn/">Code Island 3.0</a>
+            <a target="_blank" href = "https://github.com/">GitHub</a>
+            <a target="_blank" href = "https://www.python.org/">Python</a>
+            <a target="_blank" href = "https://www.runoob.com/">Rookie tutorial</a>
+            <a target="_blank" href = "https://www.roblox.com/">ROBLOX</a>
+            <br/>
+            <h2 class="gradient" >Author recommendation:</h2>
+            <a class="gradient" target="_blank" href = "https://github.com/NSSzzx/Python-exe">Lost Forest game download</a>
+            <a class="gradient" target="_blank" href = "">Author Codemao Community URL</a>
+            <a class="gradient" target="_blank" href = "https://shequ.codemao.cn/work_shop/820">Neutron Star Studio Codemao Community Website</a>
+            <a class="gradient" target="_blank" href = "http://zzxgzs.mysxl.cn/">Neutron Star Studio Official Website (Abandoned)</a>
+            <a class="gradient" target="_blank" href = "">Neutron Star Studio official website (new, under development)</a>
+            <p style = "font-size: 12px;">Google Translate provides translated content</p>
+            <p style = "font-size: 12px;">Pages completion schedule of 75%, has been shown to function can be used (web version 1.6) Author: NSS中子星</p>
+        </div>
+        <a class="gradient" href="advanced_search.html">Advanced Search</a>
+        <br/>
+        <br/>
+        <a href="start_page.html">前往中文版(Go to Chinese version)</a>
+    </body>
+</html>

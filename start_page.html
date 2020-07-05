@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Tab是为了容易看懂-->
+        <title>中子星工作室启动页</title>
+        <link href="images/logo.ico" rel="shortcut icon">
+        <!--页面编码-->
+        <meta charset="UTF-8">
+        <!--CSS样式-->
+            <!--导入样式-->
+                <!--类：渐变色-->
+                    <link href="CSS/gradient.css" type="text/css" rel="stylesheet"/>
+                <!--Boorsrarp4.5.0 CSS-->
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.css.map" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-grid.min.css.map" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.css.map" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap-reboot.min.css.map" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.css.map" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+                    <link href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css.map" type="text/css" rel="stylesheet"/>
+            <!--写入样式-->
+                <!--背景-->
+                    <style>
+                        body{
+                            background: url(images/background.jpeg);
+                            background-position: center;
+                            background-repeat: repeat;
+                            background-position: 0% 0%;
+                        }
+                    </style>
+                <!--<a>标签样式-->
+                    <style>
+                        a{
+                            padding: 20px;
+                            color: #FFFFFF;
+                        }
+                    </style>
+        <!--JS代码-->
+            <!--导入代码-->
+                <!--单选框（Jquery）-->
+                    <script src="JS/radio.js"></script>
+                <!--jQuery3.5.1 JS-->
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.map"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.js"></script>
+                    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.slim.min.map"></script>
+                <!--Boorsrarp4.5.0 JS-->
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.js.map"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+                    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.min.js.map"></script>
+        <!--写入代码-->
+            <!--百度搜索-->
+                <script>
+                    function baidu_search() {
+                        window.location.href = 'https://www.baidu.com/s?w=' + document.getElementById("search_content_box").value;
+                    }
+                </script>
+            <!--必应搜索-->
+                <script>
+                    function bing_search() {
+                        window.location.href = 'https://cn.bing.com/search?q=' + document.getElementById("search_content_box").value + "&FORM=BESBTB&ensearch=1";
+                    }
+                </script>
+            <!--选择百度搜索引擎-->
+                <script>
+                    function choose_baidu() {
+                        document.getElementById('start_searching').onclick = baidu_search;
+                        document.getElementById('start_searching').value = '百度一下';
+                    }
+                </script>
+            <!--选择必应搜索引擎-->
+                <script>
+                    function choose_bing() {
+                        document.getElementById('start_searching').onclick = bing_search;
+                        document.getElementById('start_searching').value = '必应搜索';
+                    }
+                </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;" class="gradient">中子星工作室</h1>
+        <!--搜索栏-->
+        <div style="text-align: center;">
+            <input id = "search_content_box" class="btn btn-light" name="browser" type = "text" style = "width: 400px;"/>
+            <input id = "start_searching" class="btn btn-primary" name="browser" type = "button" value ="百度一下" onclick = "return baidu_search();"/>
+        </div>
+        <div style="text-align: center;color: #FFFFFF;">
+            <br/>
+            <label>
+                <input id="baidu" name="browser" value="" type="radio" onclick="return choose_baidu();" checked/>
+                百度搜索引擎
+            </label>
+            <label>
+                <input id="bing" name="browser" value="" type="radio" onclick="return choose_bing();"/>
+                必应国际版搜索引擎
+            </label>
+            <br/>
+            <a class="gradient" href="advanced_search.html">高级搜索</a>
+            <h2>快捷链接：</h2>
+            <a target="_blank" href = "https://www.baidu.com/">百度</a>
+            <a target="_blank" href = "https://shequ.codemao.cn/">编程猫社区</a>
+            <a target="_blank" href = "https://kitten.codemao.cn/">源码编辑器3.0</a>
+            <a target="_blank" href = "https://preview-kitten.codemao.cn/">源码编辑器4.0</a>
+            <a target="_blank" href = "https://box.codemao.cn/">代码岛2.0</a>
+            <a target="_blank" href = "https://box3.codemao.cn/">代码岛3.0</a>
+            <a target="_blank" href = "https://github.com/">GitHub</a>
+            <a target="_blank" href = "https://www.python.org/">Python</a>
+            <a target="_blank" href = "https://www.runoob.com/">菜鸟教程</a>
+            <a target="_blank" href = "https://www.4399.com/">4399</a>
+            <br/>
+            <h2 class="gradient" >作者推荐：</h2>
+            <a class="gradient" target="_blank" href = "">作者编程猫社区主页</a>
+            <a class="gradient" target="_blank" href = "https://shequ.codemao.cn/work_shop/820">中子星工作室编程猫社区主页</a>
+            <a class="gradient" target="_blank" href = "http://zzxgzs.mysxl.cn/">中子星工作室官方网站（旧）</a>
+            <a class="gradient" target="_blank" href = "">中子星工作室官方网站（新）</a>
+            <p style = "font-size: 12px;">开发人员：NSS中子星（网名）</p>
+        </div>
+        <a class="gradient" href="advanced_search.html">高级搜索</a>
+        <br/>
+        <br/>
+        <a href="En_start_page.html">Go to English version（前往英文版）</a>
+        <div id="message">
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>消息！</strong> 网页更新了！使用了Bootstrap4.5.0优化界面！
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>警告！</strong> 英文版网页不在被中子星工作室支持
+            </div>
+            <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>消息！</strong> 中文版网页进行过重置
+            </div>
+        </div>
+    </body>
+</html>
